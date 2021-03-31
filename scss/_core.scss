@@ -1,0 +1,35 @@
+html, body {
+    font-family: 'Open Sana', sans-serif;
+    color: #423D3F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0B3757;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+p {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+a {
+    color: #9ACFF6;
+    text-decoration: underline;
+
+    &:hover, &:active, &:focus {
+        color: darken(#9ACFF6, 15%);
+
+    }
+}
