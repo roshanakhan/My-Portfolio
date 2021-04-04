@@ -9,29 +9,32 @@
     <meta name="description" content="This is my web development portfolio. Check it out.">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
 
 </head>
 <body>
     <section class="hero-unit dark-content d-flex align-items-center">
+        <div class="overlay">
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-sm-10 col-md-6">
                     <h1 class="hero-unit-heading">I'm Roshana Khan</h1>
                     <h2 class="hero-unit-subheading">Web Designer &amp; Developer</h2>
                     <p>I enjoy building interesting, beautiful and professional websites.</p>
-                    <p>This site showcases some of my designs</p>
+                    <p>This website will showcase some of my favourite and recent designs</p>
                     <button id="portfolio-button" class="mt-5 btn btn-primary">Check out my portfolio</button>
                 </div>
 
             </div>
         </div>
+    </div>
     </section>
 
-    <section class="content-section content-section-centered">
+    <section id="portfolio-section" class="content-section content-section-centered">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -77,29 +80,27 @@
         </div>
     </section>
 
-    <section class="content-section content-section-side-image dark-content">
+    <section class="content-section content-section-side-image dark-content" id="aboutme-section">
         <div class="content-section-side-image-container d-block d-sm-none" style="background-image: url('img/who-am-i-mobile.jpg')"></div>
         <div class="content-section-side-image-content">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-9 offset-sm-1">
                         <h2 class="content-section-side-image-heading">
-                           <img class="img-circle mb-2" src="img/profile-picture.png" width="80" height="80" alt="Roshana Khan"> 
+                           <img class="img-circle mb-2" src="img/profile-picture.png" width="100" height="100" alt="Roshana Khan"> 
                            <br>
-                           Who Am I?
+                           About Me
                         </h2>
                         <p>
-                            fbvjfdbvldfbvlfncjdlnvjflnvjdbvjbdfvbfvjbfdvb
+                            Hi, my name is Roshana and I am a final (5th) year student studying Bachelor of Engineering (Honours), Diploma in Professional Engineering Practice with a software major at the University of Technology Sydney (UTS).
                         </p>
                         <p>
-                            fbvjfdbvldfbvlfncjdlnvjflnvjdbvjbdfvbf
+                            Through my life after high school, I have been deeply interested in design and developing systems that help people in numerous ways to make their lives easier. I am a natural problem-solver, skilled with designing and great at coding, therefore I have chosen the path of web development to create beautiful, professional and responsive web designs. As a skilled designer, I am also passionate about user experience design as I like analysing existing and new systems to improve and create innovative solutions for everyday users and provide them with comfortable use.
                         </p>
                         <p>
-                            fbvjfdbvldfbvlfncjdlnvjflnvjdbvjbdfv
+                            <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#skills-modal">View my frontend programming skill levels</button>
                         </p>
-                        <p>
-                            fbvjfdbvldfbvlfncjdlnvjflnvjdbvjbdfvbfvjbfdvbkdjb <a href="#">Click Here</a> fvjdbvjbdfjbvdkvb
-                        </p>
+                        <!-- // github linkedin -->
                     </div>
                 </div>
             </div>
@@ -117,15 +118,15 @@
             </div>
             <div class="row">
                 <div class="offset-sm-3 col-sm-6">
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/roshana.khan@live.com" method="POST">
                         <input class="contact-form-input" type="text" name="name" placeholder="Name" value="" required>
                         <input class="contact-form-input" type="email" name="email" placeholder="Email Address" value="" required>
                         <input class="contact-form-input" type="number" name="phone_number" placeholder="Phone Number" value="" required>
                         <textarea class="contact-form-input" name="query" placeholder="Your query..."></textarea>
                         <div class="contact-form-actions">
-                            <input class="contact-form-checkbox-input" type="checkbox" name="consent" value="1" required>
+                            <input class="contact-form-checkbox-input" id="consent" type="checkbox"  name="consent" value="1" required>
                             <label class="contact-form-checkbox-label" for="consent">
-                                I agree to receive a direct response to my enquiry
+                                I agree to receive a direct response to my enquiry via the contact details I have provided above.
                             </label>
                             <button class="btn btn-primary btn-block" type="submit">
                                 Send Message
@@ -141,6 +142,63 @@
     <footer class="footer">
         &copy; Roshana Khan 2021
     </footer>
+    
+<div class="modal fade" id="skills-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="skills-modal-label">All Skillsets</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="mt-1">These are my current skills, updated as of <strong>April 2021</strong></p>
+          <div class="skillsets">
+              <div class="skillset">
+                  <h3 class="skillset-heading">HTML5</h3>
+                  <div class="progress">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Expert</div>
+                  </div>
+              </div>
+              <div class="skillset">
+                <h3 class="skillset-heading">CSS3/SCSS</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                </div>
+            </div>
+            <div class="skillset">
+                <h3 class="skillset-heading">JavaScript</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Intermediate</div>
+                </div>
+            </div>
+            <div class="skillset">
+                <h3 class="skillset-heading">React JS</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Beginner</div>
+                </div>
+            </div>
+            <div class="skillset">
+                <h3 class="skillset-heading">Vue JS</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Beginner</div>
+                </div>
+            </div>
+            <div class="skillset">
+                <h3 class="skillset-heading">JQuery</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Beginner</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
