@@ -52,8 +52,6 @@ function toggleTween(tween) {
     year = today.getFullYear();
     
     document.getElementById("currentDate").innerHTML = daylist[day] + " " + date + "/" + month + "/" + year;
-  
-    
 
 
 
