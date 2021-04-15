@@ -73,6 +73,49 @@ header{
     align-items: center;
 }
 
+.scroll{
+    width: 100%;
+    height: 100vh;
+    background-color: #625858;
+    align-items: center;
+    text-align: center;
+}
+
+.scroll-2{
+    width: 100%;
+    height: 100vh;
+    background-color: #aaa1a1;
+    align-items: center;
+    text-align: center;
+}
+
+.watch {
+    width: 250px;
+    position: relative;
+    right: 400px;
+    margin-top: 12rem;
+}
+
+.watch-2 {
+    width: 250px;
+    position: relative;
+    right: 300px;
+    margin-top: 12rem;
+}
+
+.middle-text {
+    text-align: left;
+    color: white;
+    font-size: 4rem;
+    width: 500px;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    /* flex:1; */
+}
+.middle-text span {
+    color: #35b757;
+}
+
 .circle{
     position: absolute;
 }
@@ -87,6 +130,11 @@ header{
     right: -3rem;
 }
 
+.moving-circle {
+    width: 300px;
+}
+
+
 .content{
     width: 100%;
     display: flex;
@@ -95,6 +143,16 @@ header{
     z-index: 10;
     margin-left: 85px;
     margin-top: 50px;
+}
+
+.content-2 {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-left: 45px;
 }
 
 .text{
@@ -156,6 +214,24 @@ header{
         width: 700px;
 }
 
+.imgs-wrapper {
+   
+}
+
+.imgs-wrapper img{
+    width: 450px;
+}
+
+.sub-text {
+    color: #35b757;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20rem;
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+
+}
 .overlay{
     width: 100%;
     height: 100vh;

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>IMG EDITOR - Editing Tool</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <nav class="nav">
+              <!-- From logomakr.com -->
+              <img src="logo.png" alt="" style="margin-left: 40px; width: 300px;">
+            </nav>
+        </div>
+    </header>
+
+  <div class="bg">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-4 ml-5">
+        <div class="row text-center d-flex mt-5">
+          <div class="col-md-12">
+            <button onclick="clear_canvas()" type="button" class="btn clear-btn tool-button main-btn"><i class="far fa-trash-alt"></i> Clear All</button> 
+            <button id="revert-btn" class="btn main-btn remove-btn"><i class="fas fa-eraser"></i> Erase Filters</button>    
+            <button onclick="undo_last()" type="button" class="tool-button main-btn btn undo-btn"><i class="fas fa-undo"></i> Undo</button> 
+        </div>
+        </div>
+        <hr class="solid">
+        <div class="row text-center">
+          <div class="custom-file col-12">
+              <input type="file" class="custom-file-input" id="upload-file" hidden>
+              <button onclick="uploadFileActive()" type="button" id="custom-btn" class="btn upload-btn main-btn btn-block"><i class="fas fa-arrow-circle-up"></i> Upload Image</button>
+              <label for="upload-file" class="custom-file-label" hidden></label>
+          </div>
+        </div>
+
+        <h4 class="text-center mt-5">Edit Effects</h4>
+  
+        <div class="row text-center">
+          <div class="col-md-3">
+            <div><span class="brightness-counter">0</span></div>
+            <div class="btn-group btn-group-sm">
+              <button class="filter-btn brightness-remove btn edit">-</button>
+              <button class="btn btn-black btn-disabled" disabled>Brightness</button>
+              <button class="filter-btn brightness-add btn edit">+</button>
+            </div>
+          </div>
+  
+          <div class="col-md-3">
+            <div><span class="contrast-counter">0</span></div>
+            <div class="btn-group btn-group-sm">
+              <button class="filter-btn contrast-remove btn edit">-</button>
+              <button class="btn btn-black btn-disabled" disabled>Contrast</button>
+              <button class="filter-btn contrast-add btn edit">+</button>
+            </div>
+          </div>
+  
+          <div class="col-md-3">
+            <div><span class="saturation-counter">0</span></div>
+            <div class="btn-group btn-group-sm">
+              <button class="filter-btn saturation-remove btn edit">-</button>
+              <button class="btn btn-black btn-disabled" disabled>Saturation</button>
+              <button class="filter-btn saturation-add btn edit">+</button>
+            </div>
+          </div>
+  
+          <div class="col-md-3">
+            <div><span class="vibrance-counter">0</span></div>
+            <div class="btn-group btn-group-sm">
+              <button class="filter-btn vibrance-remove btn edit ">-</button>
+              <button class="btn btn-black btn-disabled " disabled>Vibrance</button>
+              <button class="filter-btn vibrance-add btn edit ">+</button>
+            </div>
+          </div>
+        </div>
+
+
+        <h4 class="text-center mt-5">Add Filters</h4>
+  
+        <div class="row mb-3 mt-4">
+          <div class="col-md-6">
+            <button class="filter-btn vintage-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #272324, #83B799, #E2CD6D, #C2B28F, #E4D8B4, #E86F68);">
+                Vintage
+              </button>
+          </div>
+          <div class="col-md-6">
+            <button class="filter-btn lomo-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #EB0028, #00A0DF);">
+                Lomo
+              </button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <button class="filter-btn clarity-add btn btn-dark btn-block button" style="background:#c2c2d6;">
+                Clarity
+              </button>
+          </div>
+          <div class="col-md-6">
+            <button class="filter-btn sincity-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #565656, #3c3c3c, #702f1e);">
+                Sin City
+              </button>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6">
+            <button class="filter-btn crossprocess-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #FF4860, #E879CE, #5FD0FF);">
+                Cross Process
+              </button>
+          </div>
+          <div class="col-md-6">
+            <button class="filter-btn pinhole-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #F8B195, #F67280, #C06C84, #6C5B7B, #355C7D);">
+                Pinhole
+              </button>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <button class="filter-btn nostalgia-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #fdf0c4, #f7a992, #82a0c2, #4c364d);">
+                Nostalgia
+              </button>
+          </div>
+          <div class="col-md-6">
+            <button class="filter-btn hermajesty-add btn btn-dark btn-block button" style="background: linear-gradient(to right, #f5afac, #8b4a73, #4f3140);">
+                Her Majesty
+              </button>
+          </div>
+        </div>
+
+        <h4 class="text-center mt-5">Draw</h4>
+
+        <div class="row mt-3">
+          <div class="draw-tool-box col-md-12">
+            <div class="paint-tools">
+                
+                <div onclick="change_color(this)" class="colors" style="background: red;"></div>
+                <div onclick="change_color(this)" class="colors" style="background: yellow;"></div>
+                <div onclick="change_color(this)" class="colors" style="background: green;"></div>
+                <div onclick="change_color(this)" class="colors" style="background: purple;"></div>
+                <div onclick="change_color(this)" class="colors" style="background: blue;"></div>
+              
+                <input onInput="drawing_color = this.value" type="color" class="color-picker">
+                <button onclick="fill_canvas()" class="fill-btn" id="fill-btn"><i class="fas fa-paint-roller"></i></button>
+                <input onInput="drawing_width = this.value" type="range" value="5" min="1" max="100" class="pen-range">
+                <span class="pen-width-counter">5</span>
+            
+            </div>
+
+          </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="canvas-space">
+        <canvas id="canvas" ></canvas>
+  
+      
+        <div class="row mt-5">
+          <div class="col-md-6 offset-sm-3 mb-5">
+            <button id="download-btn" class="btn download-btn main-btn btn-block"><i class="fas fa-arrow-circle-down"></i> Download Edited Image</button>
+          </div>
+          
+        </div>
+      </div>
+    
+    </div>
+      </div>
+  </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

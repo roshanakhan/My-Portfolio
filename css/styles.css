@@ -58,10 +58,14 @@ a:hover, a:active, a:focus {
 .hero-unit .hero-unit-subheading {
   color: #d147a3;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 42px;
   font-weight: 600;
   letter-spacing: 2.4px;
   margin-bottom: 45px;
+}
+.hero-unit .hero-unit-heading {
+  font-weight: 400;
+  font-size: 35px;
 }
 
 .overlay {
@@ -71,7 +75,7 @@ a:hover, a:active, a:focus {
   overflow: auto;
   top: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 @media only screen and (max-width: 576px) {
@@ -113,7 +117,7 @@ a:hover, a:active, a:focus {
   text-align: center;
 }
 .content-section.dark-content {
-  background: #303B48;
+  background: rgba(0, 0, 0, 0.85);
 }
 .content-section.content-section-side-image {
   display: flex;

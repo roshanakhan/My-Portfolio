@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+header  {
+    height: 80px;
+    background: black;
+    align-items: center;
+    padding-top: 18px;
+}
+
+nav {
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    color: black;
+    background: black;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+
+.container{
+    max-width: 130rem;
+    height: 110vh;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.25);
+    
+}
+
+.edit {
+    background: linear-gradient(135deg, #3a8ffe 0%, #8c96d7 100%);
+}
+
+
+.upload-btn {
+    background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
+    color: #fff;
+    padding: 8 4px;
+    border: 2px solid #9658fe;
+    outline: none;
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.remove-btn {
+    background: linear-gradient(135deg, #ff6600 0%, #ff6600 100%);
+    color: #fff;
+    padding: 8 4px;
+    border: 2px solid #ff6600;
+    outline: none;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.clear-btn {
+    background: linear-gradient(135deg, red 0%, #d9534f 100%);
+    color: #fff;
+    padding: 8 4px;
+    border: 2px solid #d9534f;
+    outline: none;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.undo-btn {
+    background: linear-gradient(135deg, #3a8ffe 0%, orangered 100%);
+    color: #fff;
+    padding: 8 4px;
+    border: 2px solid #8c96d7;
+    outline: none;
+    font-size: 14px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #5cb85c 0%, green 100%);
+    color: #fff;
+    padding: 8px;
+    border: 2px solid #5cb85c;
+    outline: none;
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.main-btn:hover {
+    background: linear-gradient( black, black 100%);
+    color: white;
+}
+
+.fill-btn {
+    width: 50px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+.btn-black {
+    background: black;
+}
+
+.filter-btn {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: black;  
+    transition: background-color 1s; 
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.edit:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+.canvas-space {
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 700px;
+    height: 400px;
+}
+
+canvas {
+    margin: auto;
+    background: #ececec;
+    border: rgba(0, 0, 0, 0.25);
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: -3px 2px 9px 6px grey;
+  }
+  
+  .btn-disabled {
+    color: #fff !important;
+  }
+
+  .draw-tool-box {
+      border-radius: 5px;
+      border: 2px #3a8ffe;
+      background: #8c96d7;
+      border-width: 6px;
+      padding: 10px;
+  }
+  
+  .paint-tools {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.paint-tools .colors {
+    height: 20px;
+    width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid white;
+    align-self: center;
+    margin: 0 5px;
+}
+
+.tools .tool-button {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    background: #222;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.color-picker {
+    align-self: center;
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+
+}
+
+.pen-range {
+    align-self: center;
+    margin: 0 10px;
+}
+
+.pen-width-counter{
+    color: black;
+    align-self: center;
+    font-size: 14px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 1px;
+    -webkit-appearance: none;
+    height: 1px;
+    background: #434343;
+    border-radius: 20px;
+    box-shadow: 2px 0 0 5px #9658fe;
+  }
+
