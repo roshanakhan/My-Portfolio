@@ -5,7 +5,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #303B48;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 h1 {
@@ -26,7 +26,7 @@ p {
 }
 
 a {
-  color: #303B48;
+  color: #d147a3;
   text-decoration: underline;
 }
 a:hover, a:active, a:focus {
@@ -45,7 +45,7 @@ a:hover, a:active, a:focus {
 }
 
 .bg-primary {
-  background: linear-gradient(105.63deg, #EA2626 -21.04%, #0029FF 147.44%);
+  background: linear-gradient(105.63deg, #c92c94 -21.04%, #2b9dd1 147.44%);
 }
 
 .hero-unit {
@@ -156,6 +156,7 @@ a:hover, a:active, a:focus {
   border-radius: 6px;
   overflow: hidden;
   margin: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.25);
 }
 .portfolio-cards .portfolio-card .portfolio-card-image {
   height: 200px;
@@ -245,7 +246,7 @@ a:hover, a:active, a:focus {
 
 .footer {
   background: #303B48;
-  color: #ADABAB;
+  color: white;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -265,4 +266,7 @@ a:hover, a:active, a:focus {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 5px;
+}
+.skillsets .progress {
+  background-color: rgba(0, 0, 0, 0.25);
 }
