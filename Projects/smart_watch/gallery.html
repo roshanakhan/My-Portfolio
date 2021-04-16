@@ -43,30 +43,19 @@
     </div>
 
     <div class="container">
-       
             <div class="imgs-wrapper">
-                <img class="slide-1" src="img/3.png" alt="">
-                <img class="slide-2" src="img/2.png" alt="">
-                <!-- <img class="slide-3" src="img/1.png" alt="">   -->
+                <img class="watch-slide-1" src="img/3.png" alt="">
+                <img class="watch-slide-2" src="img/2.png" alt="">
                 
                 <div class="sub-text">
                     <h3 style="margin-left: -6rem;">Elegant White</h3>
-            
                     <h3 style="margin-left: 30rem;" >Classic Black</h3>
-            
-                    <!-- <h3 style="margin-left: 23rem;">Hot Red</h3> -->
                 </div>
                
             </div>
             </div>
             
     </div>
-
-    <!-- <div class="overlay">
-        <div class="layer layer-1"></div>
-        <div class="layer layer-2"></div>
-        <div class="layer layer-3"></div>
-    </div> -->
 </section>
 <section class="scroll">
         <div class="container">
@@ -82,69 +71,130 @@
         </div>
 </section>
 <section class="scroll-2">
-    <div class="container">
+    <div class="container-slide-1">
         <div class="content-2">
-            <div class="middle-text">
-                <!-- <h1 class="text-2">With apps for <span>everyday use</span></h1> -->
+            <div class="slide-text-1">
+                <h1 class="text-4">Classic and elegantly styled just for you<span></span></h1>
             </div>
-            <div class="watch-2 watch-img-2">
-                <img src="img/sports.png" style="width: 450px;" alt="">
+            <div class="slide-1">
+                <img src="img/slide1.jpg" style="width: 400px;" alt="">
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+<section class="scroll-3">
+    <div class="container">
+        <div class="content-3">
+            <div class="middle-text-horcenter">
+                <h1 class="text-3"><span>You will love it</span></h1>
+            </div>
+            
+            
+        </div>
+
+    </div>
+</section>
+<section class="scroll-4">
+    <div class="container">
+        <div class="slide-content-2">
+            <div class="slide-text-2">
+                <h1 class="text-4"><span>For everyone</span></h1>
+            </div>
+            <div class="slide-2">
+                <img src="img/slide3.jpg" style="width: 20vw;" alt="">
             </div>
             
         </div>
     </div>
 </section>
+<footer class="footer">
+    &copy; Smartech 2021
+</footer>
 <!--Gsap CDN    -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.5/gsap.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 <script>
-    // Animation
-    // gsap.to('.layer-1', {y: '-100vh', delay: .3});
-    // gsap.to('.layer-2', {y: '100vh', delay: .3});
-    // gsap.to('.layer-2', {y: '-100vh', delay: .6});
-    // gsap.to('.layer-3', {y: '-100vh', delay: .3});
-    // gsap.to('.overlay', {x: '-100vw', delay: .3});
-
-    // gsap.from('.text', {opacity: 0, y: 100, duration: 2});
-
-    ////////////////////////////////////////////
+    
     gsap.to(".moving-circle", {x:1000, rotation: 360, duration: 2});
     gsap.fromTo(".moving-circle", {opacity: 1},{opacity: 0, delay:1});
     
-    
-    gsap.fromTo('.slide-1',
+    // 2 watches
+    gsap.fromTo('.watch-slide-1',
         {x: '-30rem', opacity: 0},{x: 0, opacity: 1, ease: 'back.out(3)', delay:1.5});
-        gsap.fromTo('.slide-2',
+        gsap.fromTo('.watch-slide-2',
         {x: '-30rem', opacity: 0},{x: 0, opacity: 1, ease: 'back.out(3)', delay:2});
-        gsap.fromTo('.slide-3',
-        {x: '-30rem', opacity: 0},{x: 0, opacity: 1, ease: 'back.out(3)', delay:2.5});
+        // gsap.fromTo('.slide-3',
+        // {x: '-30rem', opacity: 0},{x: 0, opacity: 1, ease: 'back.out(3)', delay:2.5});
 
-        gsap.from('.sub-text', {opacity: 0, y: 100, duration: 1, delay:2});
+        gsap.from('.sub-text', {opacity: 0, y: 400, duration: 1, delay:2});
         
-        gsap.to(".watch-img-1", {scrollTrigger: '.watch-img-1', x: 500, duration:2.5});
-
-        // gsap.to(".watch-img-1", {
-        //     scrollTrigger: {
-        //         trigger: '.watch-img-1',
-        //         start: "top top"
-        //     },
-        //     x: 500, duration:2.5});
-
-        // gsap.to(".watch-img-1", {
-        //     scrollTrigger: {
-        //         trigger: '.content-2',
-        //         start: "top top"
-        //     },
-        //     x: 500, duration:1});
-
         gsap.fromTo(".text-2", {opacity: 0},{opacity: 1, delay:2});
 
         gsap.fromTo(".watch-img-2", {scale:0}, {scale:2, duration: 1.5});
 
-        
 
-////////////////////////////////////////////////
+        // watch
+        gsap.to(".watch-img-1", {
+            scrollTrigger: {
+                trigger: '.watch-img-1', 
+                toggleActions: "restart pause resume none" 
+            }, 
+            x: 500, duration:2.5
+        });
+
+        // slide text 1
+        gsap.to(".slide-text-1", {
+            scrollTrigger: {
+                trigger: '.slide-1', 
+                toggleActions: "restart pause reverse none" 
+            }, 
+            x: -200, duration:2
+        });
+
+        gsap.to(".slide-1", {
+            scrollTrigger: {
+                trigger: '.slide-1', 
+                toggleActions: "restart pause reverse none" 
+            }, 
+            x: -170, duration:2
+        });
+
+        // slide 2
+        gsap.to(".slide-2", {
+            scrollTrigger: {
+                trigger: ".slide-content-2",
+                start: "20px 80%",
+                // markers: true,
+                toggleActions: "restart pause reverse none"
+            },
+            scale:3, 
+            duration: 3.5
+        });
+
+        // slide text 2
+        gsap.to(".slide-text-2", {
+            scrollTrigger: {
+                trigger: '.slide-2', 
+                toggleActions: "restart none none none" 
+            }, 
+            x: 170, duration:3
+        });
+
+
+        // You will love it text
+        gsap.to(".text-3", {
+            scrollTrigger: {
+                trigger: ".text-3",
+                start: "20px 80%",
+                // markers: true,
+                toggleActions: "restart pause reverse none"
+            },
+            scale:2.5, 
+            duration: 3.5
+        });
+
 
 
 </script>
